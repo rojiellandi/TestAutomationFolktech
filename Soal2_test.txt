@@ -1,0 +1,11 @@
+# Soal 2.a
+- Login dengan API Login
+    a. buat New Environment dengan nama "Folktech"
+    b. Buat Variable dengan nama token
+- masukan script berikut pada API Login :
+    var jsonData = pm.response.json();
+    pm.environment.set("token", jsonData.data.token);
+
+    pm.test("Status code is 200", function () {
+        pm.response.to.have.status(200);
+    });
